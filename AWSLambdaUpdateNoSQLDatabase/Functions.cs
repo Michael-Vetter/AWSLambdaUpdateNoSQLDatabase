@@ -76,7 +76,7 @@ namespace AWSLambdaUpdateNoSQLDatabase
             {
                 StatusCode = (int)HttpStatusCode.OK,
                 Body = JsonConvert.SerializeObject(page),
-                Headers = new Dictionary<string, string> { { "Content-Type", "application/json" } }
+                Headers = new Dictionary<string, string> { { "Content-Type", "application/json" }, { "Access-Control-Allow-Origin", "*" } }
             };
 
             return response;
@@ -120,7 +120,7 @@ namespace AWSLambdaUpdateNoSQLDatabase
             {
                 StatusCode = (int)HttpStatusCode.OK,
                 Body = JsonConvert.SerializeObject(blog),
-                Headers = new Dictionary<string, string> { { "Content-Type", "application/json" } }
+                Headers = new Dictionary<string, string> { { "Content-Type", "application/json" }, { "Access-Control-Allow-Origin", "*" } }
             };
             return response;
         }
@@ -143,7 +143,7 @@ namespace AWSLambdaUpdateNoSQLDatabase
             {
                 StatusCode = (int)HttpStatusCode.OK,
                 Body = blog.Id.ToString(),
-                Headers = new Dictionary<string, string> { { "Content-Type", "text/plain" } }
+                Headers = new Dictionary<string, string> { { "Content-Type", "text/plain" }, { "Access-Control-Allow-Origin", "*" } }
             };
             return response;
         }
